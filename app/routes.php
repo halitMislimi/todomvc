@@ -11,7 +11,17 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/test/{id}/{name}', function($id , $name)
 {
-	return View::make('hello');
+  // return View::make('test', array('id'=> $id));
+  // return View::make('test')->with('id', $id);
+  //return View::make('test', compact('id'));
+  return View::make('test')->with('id', $id)->with('name', $name);
 });
+
+Route::get('/index/{id}/{name}' , 'testControler@index');
+
+
+// Dans use on lui donne le contrôlore et la methode. 
+Route::get('tasks/create', array('as' => 'tasks_create', 'uses' => 'tasksController@create'));
+Route::post('tasks/create', array('as' => 'tasks_store', 'uses' => 'tasksController@store'));
