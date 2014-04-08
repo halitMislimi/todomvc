@@ -26,3 +26,4 @@ Route::get('/index/{id}/{name}' , 'testControler@index');
 Route::get('tasks/create', array('as' => 'tasks_create', 'uses' => 'tasksController@create'));
 Route::get('tasks/index', array('as' => 'tasks_index', 'uses' => 'tasksController@index'));
 Route::post('tasks/create', array('as' => 'tasks_store', 'uses' => 'tasksController@store'));
+Route::post('tasks/index', array('as' => 'tasks_indexRedirect', 'uses' => 'tasksController@indexRedirect'));
