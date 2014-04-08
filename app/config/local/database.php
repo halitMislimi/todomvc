@@ -1,5 +1,6 @@
 <?php
 
+'connections' => array(
 	'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'ec2-54-243-50-213.compute-1.amazonaws.com',
@@ -9,4 +10,5 @@
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
-		)
+		),
+    );
