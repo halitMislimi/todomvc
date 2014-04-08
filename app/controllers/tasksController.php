@@ -15,4 +15,8 @@ class tasksController extends BaseController {
         Tasks::create(Input::all()); 
         return Redirect::route('tasks_create');
     }
+    public function index(){
+        $task = Task:all();
+        
+    }
 }
