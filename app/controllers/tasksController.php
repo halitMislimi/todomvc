@@ -5,11 +5,11 @@ class tasksController extends BaseController {
 	public function create()
 	{
         // on va dans le dossier view/tasks/create
-        return View::make('tasks/create');
+        return View::make('tasks.create');
     }
     public function index(){
-        $tasks = Tasks::all();
-        return View::make('tasks.index')->with('mytasks', $tasks);
+        $task = Tasks::all();
+        return View::make('tasks.index')->with('mytasks', $task);
     }
     public function store()
     {

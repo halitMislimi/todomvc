@@ -12,4 +12,4 @@ return array (
 			'schema'   => 'public',
 		)
     )
-    );
+ );
